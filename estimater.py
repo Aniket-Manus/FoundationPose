@@ -52,7 +52,8 @@ class FoundationPose:
 
     model_pts = mesh.vertices
     self.diameter = compute_mesh_diameter(model_pts=mesh.vertices, n_sample=10000)
-    self.vox_size = max(self.diameter/20.0, 0.003)
+    #self.vox_size = max(self.diameter/20.0, 0.003)
+    self.vox_size = 0.0005
     logging.info(f'self.diameter:{self.diameter}, vox_size:{self.vox_size}')
     self.dist_bin = self.vox_size/2
     self.angle_bin = 20  # Deg

@@ -8,11 +8,45 @@
 
 
 from Utils import *
-import json,os,sys
+import json,os,sys,glob
 
 
 BOP_LIST = ['lmo','tless','ycbv','hb','tudl','icbin','itodd']
 BOP_DIR = os.getenv('BOP_DIR')
+
+
+def _load_or_create_camK(video_dir):
+  cam_k_file = f'{video_dir}/cam_K.txt'
+  if os.path.exists(cam_k_file):
+    return np.loadtxt(cam_k_file).reshape(3,3)
+
+  intr_json = f'{video_dir}/camera_intrinsics.json'
+  if os.path.exists(intr_json):
+    with open(intr_json, 'r') as f:
+      d = json.load(f)
+    K = np.array([
+      [d['fx'], 0, d['cx']],
+      [0, d['fy'], d['cy']],
+      [0, 0, 1],
+    ], dtype=np.float32)
+    np.savetxt(cam_k_file, K)
+    logging.info(f'cam_K.txt missing. Created from camera_intrinsics.json: {cam_k_file}')
+    return K
+
+  parent_dir = os.path.dirname(video_dir.rstrip('/'))
+  seq_dirs = sorted(glob.glob(f'{parent_dir}/test_sequence*'))
+  for seq_dir in reversed(seq_dirs):
+    candidate = f'{seq_dir}/cam_K.txt'
+    if os.path.exists(candidate):
+      K = np.loadtxt(candidate).reshape(3,3)
+      np.savetxt(cam_k_file, K)
+      logging.info(f'cam_K.txt missing. Copied intrinsics from sibling sequence: {candidate}')
+      return K
+
+  raise FileNotFoundError(
+    f'{cam_k_file} not found. Also no camera_intrinsics.json or sibling cam_K.txt found. '
+    f'Record intrinsics or place cam_K.txt in the sequence folder.'
+  )
 
 def get_bop_reader(video_dir, zfar=np.inf):
   if 'ycbv' in video_dir or 'YCB' in video_dir:
@@ -60,7 +94,7 @@ class YcbineoatReader:
     self.downscale = downscale
     self.zfar = zfar
     self.color_files = sorted(glob.glob(f"{self.video_dir}/rgb/*.png"))
-    self.K = np.loadtxt(f'{video_dir}/cam_K.txt').reshape(3,3)
+    self.K = _load_or_create_camK(video_dir)
     self.id_strs = []
     for color_file in self.color_files:
       id_str = os.path.basename(color_file).replace('.png','')

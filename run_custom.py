@@ -2,6 +2,18 @@ from estimater import *
 from datareader import *
 import argparse
 import time
+import glob
+
+
+def resolve_scene_dir(scene_dir=None):
+    if scene_dir:
+        return os.path.expanduser(scene_dir)
+
+    root_dir = os.path.expanduser("~/FoundationPose/data/my_custom_object")
+    candidates = sorted(glob.glob(os.path.join(root_dir, "test_sequence_*")))
+    if candidates:
+        return candidates[-1]
+    return os.path.join(root_dir, "test_sequence")
 
 if __name__=='__main__':
     # Parse command-line arguments so you can swap object mesh, dataset path,
@@ -9,16 +21,19 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser()
     code_dir = os.path.dirname(os.path.realpath(__file__))
     # 3D model (OBJ) of the object to be tracked.
-    parser.add_argument('--mesh_file', type=str, default='/home/aniket/FoundationPose/data/my_custom_object/box_part_meters.obj')
+    parser.add_argument('--mesh_file', type=str, default='/home/aniket/FoundationPose/data/my_custom_object/Mpro_CasingLeft_V007_blender.obj')
     # Folder containing rgb/, depth/, masks/, and camera intrinsics.
-    parser.add_argument('--test_scene_dir', type=str, default='/home/aniket/FoundationPose/data/my_custom_object/test_sequence')
+    parser.add_argument('--test_scene_dir', type=str, default=None)
     # Iterations for first-frame registration and later-frame tracking updates.
-    parser.add_argument('--est_refine_iter', type=int, default=10)
-    parser.add_argument('--track_refine_iter', type=int, default=10)
+    parser.add_argument('--est_refine_iter', type=int, default=15)
+    parser.add_argument('--track_refine_iter', type=int, default=4)
     # Set default debug to 0 for pure speed. Use 1 only when you want the GUI window display.
     parser.add_argument('--debug', type=int, default=1)
     parser.add_argument('--debug_dir', type=str, default=f'{code_dir}/debug')
     args = parser.parse_args()
+    args.test_scene_dir = resolve_scene_dir(args.test_scene_dir)
+
+    print(f"Using scene folder: {args.test_scene_dir}")
 
     # Reproducibility + readable logs.
     set_logging_format()
