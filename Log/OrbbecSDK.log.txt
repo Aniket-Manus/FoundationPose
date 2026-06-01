@@ -1,0 +1,441 @@
+[06/01 10:01:26.773359][error][22789][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:01:26.773415][error][22789][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:01:26.790247][info][22789][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:01:26.790261][info][22789][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:01:26.790266][info][22789][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:01:26.790268][info][22789][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:01:28.810669][info][22789][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:01:28.810705][info][22789][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:01:28.895971][info][22789][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:01:28.895989][info][22789][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:01:28.895992][info][22789][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:01:28.895994][info][22789][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:01:28.895996][info][22789][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:01:28.895997][info][22789][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:01:29.530997][info][22789][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:01:29.531035][info][22789][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x59FF527BD5C0
+[06/01 10:01:29.592681][info][22789][Pipeline.cpp:216] [CP2C6410003F] Check and set config done!
+[06/01 10:01:29.600469][info][22789][Pipeline.cpp:254] [CP2C6410003F] Try to start streams!
+[06/01 10:01:29.600516][info][22789][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Color, format: RGB, width: 640, height: 400, fps: 30}
+[06/01 10:01:29.600532][info][22789][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Color
+[06/01 10:01:29.600538][info][22789][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Color, format: YUYV, width: 640, height: 400, fps: 30}
+[06/01 10:01:29.616403][info][22789][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Depth, format: Y16, width: 640, height: 400, fps: 30}
+[06/01 10:01:29.616442][info][22789][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Depth
+[06/01 10:01:29.616448][info][22789][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Depth, format: Z16, width: 640, height: 400, fps: 30}
+[06/01 10:01:29.632742][info][22789][Pipeline.cpp:270] [CP2C6410003F] Start streams done!
+[06/01 10:01:29.632775][info][22789][Pipeline.cpp:238] [CP2C6410003F] Pipeline start done!
+[06/01 10:01:29.791133][warning][22789][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100
+[06/01 10:01:30.148071][info][23085][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Color
+[06/01 10:01:30.254949][info][23086][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Depth
+[06/01 10:01:31.387772][info][22789][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:01:31.387791][info][22789][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:01:31.387807][info][22789][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Depth
+[06/01 10:01:31.463823][warning][23085][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=458488, expected=512000 @Color
+[06/01 10:01:31.469947][info][22789][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Depth
+[06/01 10:01:31.469993][info][22789][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Depth
+[06/01 10:01:31.469999][info][22789][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Color
+[06/01 10:01:31.548969][info][22789][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Color
+[06/01 10:01:31.549089][info][22789][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Color
+[06/01 10:01:31.549092][info][22789][Pipeline.cpp:332] [CP2C6410003F] Stop streams done!
+[06/01 10:01:31.557018][info][22789][Pipeline.cpp:356] [CP2C6410003F] Stop pipeline done!
+[06/01 10:01:31.557039][info][22789][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x59FF527BD5C0
+[06/01 10:01:31.557288][info][22789][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:01:31.617094][info][22789][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:01:31.617119][info][22789][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:01:31.617180][info][22789][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:01:32.891371][warning][23088][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**4 logs in 3100ms, last: 10:01:30.191926**]
+[06/01 10:01:34.465788][warning][23164][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32715, expected=512000 @Color [**1 logs in 3001ms, last: 10:01:31.465633**]
+[06/01 10:01:36.912962][info][22789][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:01:36.912984][info][22789][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:01:47.878188][error][23390][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:01:47.878247][error][23390][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:01:47.894058][info][23390][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:01:47.894077][info][23390][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:01:47.894081][info][23390][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:01:47.894084][info][23390][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:01:49.900219][info][23390][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:01:49.900256][info][23390][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:01:49.977771][info][23390][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:01:49.977786][info][23390][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:01:49.977789][info][23390][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:01:49.977791][info][23390][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:01:49.977794][info][23390][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:01:49.977795][info][23390][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:01:50.613262][info][23390][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:01:50.613336][info][23390][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x612C28AC69D0
+[06/01 10:01:50.674557][info][23390][Pipeline.cpp:216] [CP2C6410003F] Check and set config done!
+[06/01 10:01:50.682355][info][23390][Pipeline.cpp:254] [CP2C6410003F] Try to start streams!
+[06/01 10:01:50.682403][info][23390][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Color, format: RGB, width: 640, height: 400, fps: 30}
+[06/01 10:01:50.682418][info][23390][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Color
+[06/01 10:01:50.682425][info][23390][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Color, format: YUYV, width: 640, height: 400, fps: 30}
+[06/01 10:01:50.698486][info][23390][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Depth, format: Y16, width: 640, height: 400, fps: 30}
+[06/01 10:01:50.698534][info][23390][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Depth
+[06/01 10:01:50.698542][info][23390][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Depth, format: Z16, width: 640, height: 400, fps: 30}
+[06/01 10:01:50.714236][info][23390][Pipeline.cpp:270] [CP2C6410003F] Start streams done!
+[06/01 10:01:50.714243][info][23390][Pipeline.cpp:238] [CP2C6410003F] Pipeline start done!
+[06/01 10:01:50.877136][warning][23390][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100
+[06/01 10:01:51.229440][info][23655][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Color
+[06/01 10:01:51.240387][warning][23656][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32579, expected=512000 @Depth
+[06/01 10:01:51.297923][warning][23656][ObException.hpp:48] Update data size(663011) > data buffer size! (512000)
+[06/01 10:01:51.299410][warning][23656][ObLibuvcDevicePort.cpp:465] Execute failure! A libobsensor_exception has occurred!
+ - where: ObLibuvcDevicePort.cpp(465):onFrameCallback
+ - msg: Update data size(663011) > data buffer size! (512000)
+ - type: N11libobsensor16memory_exceptionE
+[06/01 10:01:51.369734][info][23656][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Depth
+[06/01 10:01:52.492954][info][23390][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:01:52.492975][info][23390][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:01:52.492993][info][23390][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Depth
+[06/01 10:01:52.580819][warning][23655][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=294669, expected=512000 @Color
+[06/01 10:01:52.586727][info][23390][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Depth
+[06/01 10:01:52.586770][info][23390][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Depth
+[06/01 10:01:52.586781][info][23390][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Color
+[06/01 10:01:52.662735][info][23390][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Color
+[06/01 10:01:52.662800][info][23390][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Color
+[06/01 10:01:52.662804][info][23390][Pipeline.cpp:332] [CP2C6410003F] Stop streams done!
+[06/01 10:01:52.670780][info][23390][Pipeline.cpp:356] [CP2C6410003F] Stop pipeline done!
+[06/01 10:01:52.670797][info][23390][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x612C28AC69D0
+[06/01 10:01:52.670930][info][23390][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:01:52.731895][info][23390][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:01:52.731920][info][23390][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:01:52.731976][info][23390][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:01:53.977442][warning][23658][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**4 logs in 3100ms, last: 10:01:51.277546**]
+[06/01 10:01:54.242365][warning][23684][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32626, expected=512000 @Depth [**6 logs in 3001ms, last: 10:01:51.259149**]
+[06/01 10:01:55.586563][warning][23718][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=98040, expected=512000 @Color [**1 logs in 3005ms, last: 10:01:52.586410**]
+[06/01 10:01:57.905822][info][23390][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:01:57.905849][info][23390][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:04:39.005161][error][25996][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:04:39.005228][error][25996][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:04:39.021007][info][25996][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:04:39.021027][info][25996][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:04:39.021029][info][25996][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:04:39.021032][info][25996][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:04:41.027355][info][25996][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:04:41.027394][info][25996][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:04:41.104692][info][25996][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:04:41.104709][info][25996][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:04:41.104711][info][25996][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:04:41.104712][info][25996][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:04:41.104713][info][25996][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:04:41.104714][info][25996][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:04:41.739848][info][25996][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:04:41.739913][info][25996][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x5896DDC59B00
+[06/01 10:04:41.802497][info][25996][Pipeline.cpp:216] [CP2C6410003F] Check and set config done!
+[06/01 10:04:41.810189][info][25996][Pipeline.cpp:254] [CP2C6410003F] Try to start streams!
+[06/01 10:04:41.810234][info][25996][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Color, format: RGB, width: 640, height: 400, fps: 30}
+[06/01 10:04:41.810249][info][25996][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Color
+[06/01 10:04:41.810255][info][25996][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Color, format: YUYV, width: 640, height: 400, fps: 30}
+[06/01 10:04:41.826053][info][25996][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Depth, format: Y16, width: 640, height: 400, fps: 30}
+[06/01 10:04:41.826066][info][25996][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Depth
+[06/01 10:04:41.826070][info][25996][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Depth, format: Z16, width: 640, height: 400, fps: 30}
+[06/01 10:04:41.842664][info][25996][Pipeline.cpp:270] [CP2C6410003F] Start streams done!
+[06/01 10:04:41.842688][info][25996][Pipeline.cpp:238] [CP2C6410003F] Pipeline start done!
+[06/01 10:04:41.999345][warning][25996][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100
+[06/01 10:04:42.330250][warning][26221][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32709, expected=512000 @Color
+[06/01 10:04:42.390569][warning][26221][ObException.hpp:48] Update data size(544601) > data buffer size! (512000)
+[06/01 10:04:42.390759][warning][26221][ObLibuvcDevicePort.cpp:465] Execute failure! A libobsensor_exception has occurred!
+ - where: ObLibuvcDevicePort.cpp(465):onFrameCallback
+ - msg: Update data size(544601) > data buffer size! (512000)
+ - type: N11libobsensor16memory_exceptionE
+[06/01 10:04:42.423915][info][26221][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Color
+[06/01 10:04:42.430676][info][26222][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Depth
+[06/01 10:04:43.794676][warning][26252][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset!
+[06/01 10:04:45.099558][warning][26248][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**4 logs in 3100ms, last: 10:04:42.399792**]
+[06/01 10:04:45.332015][warning][26249][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32636, expected=512000 @Color [**7 logs in 3001ms, last: 10:04:42.350612**]
+[06/01 10:04:46.798646][warning][26252][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**90 logs in 3003ms**]
+[06/01 10:04:47.362957][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=31.200317fps
+[06/01 10:04:47.398243][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=30.163803fps
+[06/01 10:04:47.429840][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=30.169830fps
+[06/01 10:04:47.465615][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=30.399364fps
+[06/01 10:04:52.368871][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:04:52.404162][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:04:52.435807][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:04:52.471867][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:04:52.805577][warning][26252][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**180 logs in 6006ms**]
+[06/01 10:04:57.374805][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:04:57.410081][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:04:57.441642][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:04:57.477458][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:05:02.380738][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:05:02.415991][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.970030fps
+[06/01 10:05:02.447617][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:05:02.483796][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:05:04.838846][warning][26461][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**116 logs in 12033ms, last: 10:05:04.619192**]
+[06/01 10:05:07.386674][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:05:07.421942][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:05:07.453530][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:05:07.489288][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:05:12.392601][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:05:12.427834][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:05:12.459520][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:05:12.495335][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:05:17.398551][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:05:17.433822][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:05:17.465456][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:05:17.501148][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:05:22.404485][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:05:22.439722][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:05:22.471395][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:05:22.507508][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:05:27.410399][info][26221][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:05:27.445643][info][26222][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:05:27.477268][info][26251][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:05:27.512992][info][26252][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.970030fps
+[06/01 10:05:28.852901][warning][26674][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**118 logs in 24014ms, last: 10:05:28.681000**]
+[06/01 10:05:30.729630][info][25996][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:05:30.729662][info][25996][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:05:30.729679][info][25996][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Depth
+[06/01 10:05:30.806237][warning][26221][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=196231, expected=512000 @Color
+[06/01 10:05:30.809043][info][25996][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Depth
+[06/01 10:05:30.809078][info][25996][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Depth
+[06/01 10:05:30.809086][info][25996][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Color
+[06/01 10:05:30.888045][info][25996][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Color
+[06/01 10:05:30.888123][info][25996][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Color
+[06/01 10:05:30.888126][info][25996][Pipeline.cpp:332] [CP2C6410003F] Stop streams done!
+[06/01 10:05:30.896086][info][25996][Pipeline.cpp:356] [CP2C6410003F] Stop pipeline done!
+[06/01 10:05:31.036637][info][25996][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x5896DDC59B00
+[06/01 10:05:31.036774][info][25996][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:05:31.096163][info][25996][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:05:31.096179][info][25996][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:05:31.096218][info][25996][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:05:33.808233][warning][27179][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=65331, expected=512000 @Color [**1 logs in 3001ms, last: 10:05:30.808101**]
+[06/01 10:05:36.529094][info][25996][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:05:36.529120][info][25996][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:05:36.530533][warning][27133][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**10 logs in 7677ms, last: 10:05:30.583403**]
+[06/01 10:06:36.111587][error][28105][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:06:36.111626][error][28105][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:06:36.127427][info][28105][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:06:36.127441][info][28105][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:06:36.127444][info][28105][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:06:36.127447][info][28105][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:06:38.153452][info][28105][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:06:38.153487][info][28105][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:06:38.342310][info][28105][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:06:38.342347][info][28105][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:06:38.342364][info][28105][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:06:38.342365][info][28105][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:06:38.342367][info][28105][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:06:38.342368][info][28105][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:06:38.977689][info][28105][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:06:38.977764][info][28105][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x56CF08556C50
+[06/01 10:06:39.037992][info][28105][Pipeline.cpp:216] [CP2C6410003F] Check and set config done!
+[06/01 10:06:39.045297][info][28105][Pipeline.cpp:254] [CP2C6410003F] Try to start streams!
+[06/01 10:06:39.045341][info][28105][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Color, format: RGB, width: 640, height: 400, fps: 30}
+[06/01 10:06:39.045357][info][28105][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Color
+[06/01 10:06:39.045363][info][28105][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Color, format: YUYV, width: 640, height: 400, fps: 30}
+[06/01 10:06:39.061612][info][28105][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Depth, format: Y16, width: 640, height: 400, fps: 30}
+[06/01 10:06:39.061650][info][28105][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Depth
+[06/01 10:06:39.061656][info][28105][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Depth, format: Z16, width: 640, height: 400, fps: 30}
+[06/01 10:06:39.077600][info][28105][Pipeline.cpp:270] [CP2C6410003F] Start streams done!
+[06/01 10:06:39.077606][info][28105][Pipeline.cpp:238] [CP2C6410003F] Pipeline start done!
+[06/01 10:06:39.235296][warning][28105][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100
+[06/01 10:06:39.592852][info][28358][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Color
+[06/01 10:06:39.605691][warning][28359][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=65344, expected=512000 @Depth
+[06/01 10:06:39.700161][info][28359][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Depth
+[06/01 10:06:41.030598][warning][28366][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset!
+[06/01 10:06:42.335544][warning][28361][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**4 logs in 3100ms, last: 10:06:39.636169**]
+[06/01 10:06:42.609490][warning][28364][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32680, expected=512000 @Depth [**6 logs in 3003ms, last: 10:06:39.634862**]
+[06/01 10:06:44.033968][warning][28366][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**90 logs in 3003ms**]
+[06/01 10:06:44.598460][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=30.163803fps
+[06/01 10:06:44.598640][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=30.169830fps
+[06/01 10:06:44.633735][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=31.225140fps
+[06/01 10:06:44.734440][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=30.399364fps
+[06/01 10:06:49.604405][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:06:49.604591][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:06:49.639651][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:06:49.740531][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:06:50.041040][warning][28366][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**180 logs in 6007ms**]
+[06/01 10:06:54.610325][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:06:54.610441][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:06:54.645592][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:06:54.746298][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:06:59.616252][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:06:59.616367][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:06:59.651515][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:06:59.752236][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:07:02.074330][warning][28562][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**132 logs in 12033ms, last: 10:07:01.888528**]
+[06/01 10:07:04.622210][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:07:04.622406][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.964043fps
+[06/01 10:07:04.657432][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:07:04.758128][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:07:09.628104][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:07:09.634969][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.928171fps
+[06/01 10:07:09.663362][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:07:09.764091][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:07:14.634045][info][28358][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:07:14.667484][info][28363][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=30.001987fps
+[06/01 10:07:14.669299][info][28359][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:07:14.770415][info][28366][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:07:16.247749][info][28105][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:07:16.247777][info][28105][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:07:16.247789][info][28105][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Depth
+[06/01 10:07:16.276285][warning][28358][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=503808, expected=512000 @Color
+[06/01 10:07:16.329728][info][28105][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Depth
+[06/01 10:07:16.329774][info][28105][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Depth
+[06/01 10:07:16.329785][info][28105][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Color
+[06/01 10:07:16.411714][info][28105][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Color
+[06/01 10:07:16.411797][info][28105][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Color
+[06/01 10:07:16.411802][info][28105][Pipeline.cpp:332] [CP2C6410003F] Stop streams done!
+[06/01 10:07:16.419733][info][28105][Pipeline.cpp:356] [CP2C6410003F] Stop pipeline done!
+[06/01 10:07:16.598308][info][28105][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x56CF08556C50
+[06/01 10:07:16.598452][info][28105][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:07:16.657839][info][28105][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:07:16.657853][info][28105][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:07:16.657900][info][28105][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:07:19.323914][warning][29020][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=98172, expected=512000 @Color [**1 logs in 3047ms, last: 10:07:16.323705**]
+[06/01 10:07:22.000788][info][28105][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:07:22.000809][info][28105][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:07:22.002272][warning][28778][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**70 logs in 19927ms, last: 10:07:16.004813**]
+[06/01 10:31:29.976145][error][53204][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:31:29.976201][error][53204][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:31:29.992096][info][53204][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:31:29.992117][info][53204][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:31:29.992120][info][53204][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:31:29.992125][info][53204][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:31:32.002113][info][53204][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:31:32.002142][info][53204][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:31:32.079763][info][53204][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:31:32.079790][info][53204][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:31:32.079794][info][53204][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:31:32.079796][info][53204][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:31:32.079798][info][53204][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:31:32.079800][info][53204][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:31:32.714780][info][53204][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:31:32.714834][info][53204][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x6221017C6920
+[06/01 10:31:32.714860][info][53204][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x6221017C6920
+[06/01 10:31:32.795953][info][53204][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:31:32.795982][info][53204][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:31:38.149781][info][53204][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:31:38.149803][info][53204][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:31:49.208945][error][54102][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:31:49.208996][error][54102][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:31:49.224811][info][54102][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:31:49.224825][info][54102][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:31:49.224828][info][54102][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:31:49.224831][info][54102][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:31:51.232132][info][54102][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:31:51.232183][info][54102][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:31:51.309515][info][54102][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:31:51.309532][info][54102][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:31:51.309540][info][54102][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:31:51.309541][info][54102][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:31:51.309542][info][54102][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:31:51.309543][info][54102][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:31:51.944517][info][54102][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:31:51.944551][info][54102][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x5F06784C3A50
+[06/01 10:31:52.006686][info][54102][Pipeline.cpp:216] [CP2C6410003F] Check and set config done!
+[06/01 10:31:52.014557][info][54102][Pipeline.cpp:254] [CP2C6410003F] Try to start streams!
+[06/01 10:31:52.014566][info][54102][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Color, format: RGB, width: 640, height: 400, fps: 30}
+[06/01 10:31:52.014579][info][54102][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Color
+[06/01 10:31:52.014583][info][54102][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Color, format: YUYV, width: 640, height: 400, fps: 30}
+[06/01 10:31:52.030909][info][54102][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Depth, format: Y16, width: 640, height: 400, fps: 30}
+[06/01 10:31:52.030928][info][54102][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Depth
+[06/01 10:31:52.030932][info][54102][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Depth, format: Z16, width: 640, height: 400, fps: 30}
+[06/01 10:31:52.047141][info][54102][Pipeline.cpp:270] [CP2C6410003F] Start streams done!
+[06/01 10:31:52.047192][info][54102][Pipeline.cpp:238] [CP2C6410003F] Pipeline start done!
+[06/01 10:31:52.204471][warning][54102][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100
+[06/01 10:31:52.562228][info][54365][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Color
+[06/01 10:31:52.635491][info][54366][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Depth
+[06/01 10:31:53.966565][warning][54372][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset!
+[06/01 10:31:55.304676][warning][54368][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**4 logs in 3100ms, last: 10:31:52.604777**]
+[06/01 10:31:56.970077][warning][54372][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**90 logs in 3003ms**]
+[06/01 10:31:57.567843][info][54365][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=30.169830fps
+[06/01 10:31:57.568016][info][54370][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=30.163803fps
+[06/01 10:31:57.603032][info][54366][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=30.163803fps
+[06/01 10:31:57.670371][info][54372][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=30.399364fps
+[06/01 10:32:02.573733][info][54365][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:32:02.573851][info][54370][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.970030fps
+[06/01 10:32:02.608968][info][54366][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.970030fps
+[06/01 10:32:02.676415][info][54372][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:32:03.003475][warning][54467][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**150 logs in 6033ms, last: 10:32:02.876519**]
+[06/01 10:32:07.579657][info][54365][VideoSensor.cpp:153] [CP2C6410003F] Color backend frame callback, frameRate=29.964043fps
+[06/01 10:32:07.586467][info][54370][SensorBase.cpp:370] [CP2C6410003F] Color Streaming... frameRate=29.922203fps
+[06/01 10:32:07.614898][info][54366][VideoSensor.cpp:153] [CP2C6410003F] Depth backend frame callback, frameRate=29.964043fps
+[06/01 10:32:07.682219][info][54372][SensorBase.cpp:370] [CP2C6410003F] Depth Streaming... frameRate=29.964043fps
+[06/01 10:32:10.190422][info][54102][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:32:10.190447][info][54102][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:32:10.190460][info][54102][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Depth
+[06/01 10:32:10.268302][warning][54365][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32716, expected=512000 @Color
+[06/01 10:32:10.276284][info][54102][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Depth
+[06/01 10:32:10.276341][info][54102][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Depth
+[06/01 10:32:10.276351][info][54102][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Color
+[06/01 10:32:10.344274][info][54102][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Color
+[06/01 10:32:10.344359][info][54102][Pipeline.cpp:326] [CP2C6410003F] Sensor stream stopped, sensorType=Color
+[06/01 10:32:10.344362][info][54102][Pipeline.cpp:332] [CP2C6410003F] Stop streams done!
+[06/01 10:32:10.352325][info][54102][Pipeline.cpp:356] [CP2C6410003F] Stop pipeline done!
+[06/01 10:32:10.489839][info][54102][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x5F06784C3A50
+[06/01 10:32:10.490046][info][54102][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:32:10.549408][info][54102][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:32:10.549424][info][54102][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:32:10.549468][info][54102][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:32:13.272008][warning][54715][VideoSensor.cpp:194] [CP2C6410003F] This frame will be dropped because the data size does not match the expectation! size=32623, expected=512000 @Color [**1 logs in 3003ms, last: 10:32:10.271865**]
+[06/01 10:32:15.044024][warning][54572][Pipeline.cpp:295] [CP2C6410003F] Output frameset queue is full, drop oldest frameset! [**36 logs in 12040ms, last: 10:32:10.185709**]
+[06/01 10:32:16.017408][info][54102][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:32:16.017449][info][54102][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:41:07.700488][error][65523][UsbEnumeratorLibusb.cpp:166] Failed to get string descriptor 3: error=Operation timed out
+[06/01 10:41:07.700555][error][65523][UsbEnumeratorLibusb.cpp:436] Failed to query USB device interface name. SN: CP2C6410003F
+[06/01 10:41:07.716300][info][65523][LinuxUsbPal.cpp:335] Create PollingDeviceWatcher!
+[06/01 10:41:07.716325][info][65523][DeviceManager.cpp:25] Current found device(s): (1)
+[06/01 10:41:07.716328][info][65523][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:41:07.716332][info][65523][DeviceManager.cpp:339] Enable net device enumeration: true
+[06/01 10:41:09.729010][info][65523][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:41:09.729048][info][65523][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:41:09.807008][info][65523][DeviceBase.cpp:651] key: AppSlot,value:1
+[06/01 10:41:09.807024][info][65523][DeviceBase.cpp:651] key: HwType,value:L2
+[06/01 10:41:09.807027][info][65523][DeviceBase.cpp:651] key: HwVer,value:V1.1
+[06/01 10:41:09.807030][info][65523][DeviceBase.cpp:651] key: IspFwVer,value:20250930
+[06/01 10:41:09.807032][info][65523][DeviceBase.cpp:651] key: IspNeedVer,value:20250930
+[06/01 10:41:09.807034][info][65523][DeviceBase.cpp:651] key: PresetVer,value:1.2.2
+[06/01 10:41:10.442023][info][65523][DeviceManager.cpp:194] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F FW: 1.6.00
+[06/01 10:41:10.442079][info][65523][Pipeline.cpp:42] [CP2C6410003F] Pipeline created with device: {name: Gemini 335L, sn: CP2C6410003F}, @0x5D69BF8EE630
+[06/01 10:41:10.502810][info][65523][Pipeline.cpp:216] [CP2C6410003F] Check and set config done!
+[06/01 10:41:10.510059][info][65523][Pipeline.cpp:254] [CP2C6410003F] Try to start streams!
+[06/01 10:41:10.510075][info][65523][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Color, format: RGB, width: 640, height: 400, fps: 30}
+[06/01 10:41:10.510086][info][65523][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Color
+[06/01 10:41:10.510091][info][65523][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Color, format: YUYV, width: 640, height: 400, fps: 30}
+[06/01 10:41:10.526452][info][65523][VideoSensor.cpp:58] [CP2C6410003F] Try to start stream: {type: Depth, format: Y16, width: 640, height: 400, fps: 30}
+[06/01 10:41:10.526475][info][65523][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STARTING@Depth
+[06/01 10:41:10.526481][info][65523][VideoSensor.cpp:127] [CP2C6410003F] Start backend stream: {type: Depth, format: Z16, width: 640, height: 400, fps: 30}
+[06/01 10:41:10.554226][info][65523][Pipeline.cpp:270] [CP2C6410003F] Start streams done!
+[06/01 10:41:10.554252][info][65523][Pipeline.cpp:238] [CP2C6410003F] Pipeline start done!
+[06/01 10:41:10.712026][warning][65523][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100
+[06/01 10:41:11.057698][info][65807][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Color
+[06/01 10:41:11.131994][info][65808][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STREAMING@Depth
+[06/01 10:41:12.102285][info][65868][DeviceManager.cpp:266] Device changed! removed: 1, added: 0
+[06/01 10:41:12.102316][warning][65868][DeviceBase.cpp:200] Device is deactivated or disconnected while there are still sensors streaming!
+[06/01 10:41:12.102365][info][65868][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Color
+[06/01 10:41:12.102437][warning][65868][ObException.cpp:8] Device is deactivated/disconnected!
+[06/01 10:41:12.102558][warning][65868][VideoSensor.cpp:245] [CP2C6410003F] Failed to send stop stream vendor command: Device is deactivated/disconnected!
+[06/01 10:41:12.102562][info][65868][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Color
+[06/01 10:41:12.102605][info][65868][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:41:12.102626][info][65868][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:41:12.102628][info][65868][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:41:12.102633][info][65868][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPING@Depth
+[06/01 10:41:12.102696][warning][65868][ObException.cpp:8] Device is deactivated/disconnected!
+[06/01 10:41:12.102701][warning][65868][VideoSensor.cpp:245] [CP2C6410003F] Failed to send stop stream vendor command: Device is deactivated/disconnected!
+[06/01 10:41:12.102702][info][65868][SensorBase.cpp:213] [CP2C6410003F] Stream state changed to STOPPED@Depth
+[06/01 10:41:12.102741][info][65868][SensorBase.cpp:47] [CP2C6410003F] SensorBase is destroyed
+[06/01 10:41:12.102785][info][65868][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[06/01 10:41:12.102786][info][65868][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[06/01 10:41:12.102936][info][65868][DeviceManager.cpp:25] Removed device(s) list: (1)
+[06/01 10:41:12.102939][info][65868][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP2C6410003F, Connection: USB2.1
+[06/01 10:41:12.102942][info][65868][DeviceManager.cpp:25] Current device(s) list: (0)
+[06/01 10:41:13.769681][warning][65523][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**21 logs in 3057ms**]
+[06/01 10:41:19.776682][warning][65523][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**60 logs in 6007ms**]
+[06/01 10:41:21.011374][warning][65729][UsbEnumeratorLibusb.cpp:399] Failed to open USB device: error=Access denied (insufficient permissions). Try again
+[06/01 10:41:21.061479][warning][65729][UsbEnumeratorLibusb.cpp:403] Failed to open USB device (Access denied (insufficient permissions)), skipping, info.serial and infName may be empty
+[06/01 10:41:21.061607][info][66100][DeviceManager.cpp:266] Device changed! removed: 0, added: 1
+[06/01 10:41:21.061625][info][66100][DeviceManager.cpp:25] Current device(s) list: (1)
+[06/01 10:41:21.061631][info][66100][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: , Connection: USB2.1
+[06/01 10:41:31.792242][warning][65523][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**120 logs in 12015ms**]
+[06/01 10:41:32.557059][info][65523][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:41:32.557092][info][65523][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:41:32.557097][warning][65523][ObException.cpp:8] Device is deactivated/disconnected!
+[06/01 10:41:32.564121][info][65523][Pipeline.cpp:336] [CP2C6410003F] Try to stop pipeline!
+[06/01 10:41:32.564126][info][65523][Pipeline.cpp:312] [CP2C6410003F] Try to stop streams!
+[06/01 10:41:32.564128][warning][65523][ObException.cpp:8] Device is deactivated/disconnected!
+[06/01 10:41:32.564137][warning][65523][Pipeline.cpp:49] [CP2C6410003F] Execute failure! A libobsensor_exception has occurred!
+ - where: Pipeline.cpp(49):~Pipeline
+ - msg: Device is deactivated/disconnected!
+ - type: N11libobsensor33wrong_api_call_sequence_exceptionE
+[06/01 10:41:32.564142][info][65523][Pipeline.cpp:53] [CP2C6410003F] Pipeline destroyed! @0x5D69BF8EE630
+[06/01 10:41:32.909995][warning][66412][Pipeline.cpp:305] [CP2C6410003F] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**6 logs in 1117ms, last: 10:41:32.393463**]

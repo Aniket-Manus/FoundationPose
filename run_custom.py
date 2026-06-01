@@ -26,7 +26,7 @@ if __name__=='__main__':
     parser.add_argument('--test_scene_dir', type=str, default=None)
     # Iterations for first-frame registration and later-frame tracking updates.
     parser.add_argument('--est_refine_iter', type=int, default=15)
-    parser.add_argument('--track_refine_iter', type=int, default=4)
+    parser.add_argument('--track_refine_iter', type=int, default=5)
     # Set default debug to 0 for pure speed. Use 1 only when you want the GUI window display.
     parser.add_argument('--debug', type=int, default=1)
     parser.add_argument('--debug_dir', type=str, default=f'{code_dir}/debug')
